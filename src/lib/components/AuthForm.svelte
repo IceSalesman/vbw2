@@ -9,7 +9,7 @@
   <style>
     .slider {
       position: absolute;
-      background-color: #f56565; /* bg-red-500 */
+      background-color: #e01d1d; /* bg-red-500 */
       height: 100%;
       width: 50%;
       border-radius: 9999px; /* rounded-full */
@@ -29,10 +29,12 @@
     }
   
     .dark-input {
+      background-color: #252d3b;
       width: 100%;
       padding: 0.5rem;
       border: 1px solid;
       border-radius: 0.25rem;
+      border-color: #252d3b;
       outline: none;
       transition: box-shadow 0.2s;
       &:focus {
@@ -42,7 +44,7 @@
   
     .dark-button {
       width: 100%;
-      background-color: #f56565; /* bg-red-500 */
+      background-color: #e01d1d; /* bg-red-500 */
       color: white;
       padding-top: 0.5rem; /* py-2 */
       padding-bottom: 0.5rem; /* py-2 */
@@ -62,14 +64,14 @@
         on:click={() => toggleTab('login')}
         class:text-white={activeTab === 'login'}
       >
-        Login
+        Pieslēgties
       </button>
       <button
         class="w-1/2 py-2 dark-text font-semibold z-10"
         on:click={() => toggleTab('register')}
         class:text-white={activeTab === 'register'}
       >
-        Register
+        Reģistrēties
       </button>
       <!-- Slider -->
       <div
@@ -83,43 +85,48 @@
       <form class="space-y-4">
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Lietotājvārds vai E-Pasts"
           class="dark-input dark-border"
         />
         <input
           type="password"
-          placeholder="Password"
-          class="dark-input dark-border"
+          placeholder="Parole"
+          class="dark-input dark-border"  
         />
         <button
           type="submit"
           class="dark-button"
         >
-          Login
+          Pieslēgties
         </button>
       </form>
     {:else}
       <form class="space-y-4">
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Lietotājvārds"
           class="dark-input dark-border"
         />
         <input
           type="email"
-          placeholder="Email"
+          placeholder="E-Pasts"
           class="dark-input dark-border"
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Parole"
+          class="dark-input dark-border"
+        />
+        <input
+          type="password"
+          placeholder="Atkārtot paroli"
           class="dark-input dark-border"
         />
         <button
           type="submit"
           class="dark-button"
         >
-          Register
+          Reģistrēties
         </button>
       </form>
     {/if}
